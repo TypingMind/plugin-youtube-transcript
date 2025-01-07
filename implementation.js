@@ -1,4 +1,4 @@
-async function fetchPageContent(videoId, pluginServer) {
+async function fetchYoutubeTranscript(videoId, pluginServer) {
   const response = await fetch(
     `${pluginServer}/youtube-transcript/get-transcript?query=${encodeURIComponent(
       videoId
@@ -28,7 +28,7 @@ async function get_youtube_transcript(params, userSettings) {
   const cleanPluginServer = pluginServer.replace(/\/$/, "");
 
   try {
-    const response = await fetchPageContent(videoId, cleanPluginServer);
+    const response = await fetchYoutubeTranscript(videoId, cleanPluginServer);
     return response.textOnly;
   } catch (error) {
     console.error("Error fetching transcript:", error);
