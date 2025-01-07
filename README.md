@@ -1,6 +1,6 @@
 # Youtube Transcript
 
-Fetch transcript for youtube videos using typingmind plugins server.
+This plugin allows you to fetch the transcript of YouTube videos using a provided URL.
 
 ## ❗ Important Notes
 

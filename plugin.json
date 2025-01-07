@@ -3,22 +3,22 @@
     "id": "youtube_transcript",
     "emoji": "🧩",
     "title": "YouTube Transcript",
-    "overviewMarkdown": "# Youtube Transcript\n\nFetch transcript for youtube videos using typingmind plugins server.\n\n## ❗ Important Notes\n\n- This plugin requires a plugin server to be set up. [Learn how to set up a plugin server here (open-source)](https://docs.typingmind.com/plugins/plugins-server/how-to-deploy-plugins-server-on-render)\n- Long web pages may results in long response and consume more tokens or exceed the maximum context length. This plugin is best used for short articles or blog posts.\n\n## Example usage\n> Please provide the transcript for the YouTube video at this URL: https://www.youtube.com/watch?v=22StbCBvWLg.",
+    "overviewMarkdown": "# Youtube Transcript\n\nThis plugin allows you to fetch the transcript of YouTube videos using a provided URL.\n\n## ❗ Important Notes\n\n- This plugin requires a plugin server to be set up. [Learn how to set up a plugin server here (open-source)](https://docs.typingmind.com/plugins/plugins-server/how-to-deploy-plugins-server-on-render)\n- Long web pages may results in long response and consume more tokens or exceed the maximum context length. This plugin is best used for short articles or blog posts.\n\n## Example usage\n> Please provide the transcript for the YouTube video at this URL: https://www.youtube.com/watch?v=22StbCBvWLg.",
     "openaiSpec": {
         "name": "get_youtube_transcript",
         "parameters": {
-            "type": "object",
-            "required": [
-                "url"
-            ],
-            "properties": {
-                "url": {
-                    "type": "string",
-                    "description": "URL of the youtube video whose transcript we should fetch"
-                }
+          "type": "object",
+          "required": [
+            "videoId"
+          ],
+          "properties": {
+            "videoId": {
+              "type": "string",
+              "description": "The video id extracted from a given URL"
             }
+          }
         },
-        "description": "Fetch a transcript for the youtube video with a given URL."
+        "description": "Fetch transcript for the youtube video with a given URL."
     },
     "userSettings": [
         {
